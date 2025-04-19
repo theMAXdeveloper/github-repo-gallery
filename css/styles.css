@@ -80,7 +80,8 @@ h1 {
 h3 {
     width: 100%;
     text-align: center;
-    color: tan;
+    color: gold;
+   -webkit-text-stroke: 0.2px red;
 }
 
 ul {
@@ -153,6 +154,11 @@ section.repo-data {
     padding-bottom: 1em;
 }
 
+.repo-data h3 {
+    color: black;
+   -webkit-text-stroke: 0.2px gold;
+}
+
 .repos {
     display: flex;
     flex-wrap: wrap;
@@ -173,7 +179,8 @@ section.repo-data {
 .repo-list li {
     width: 90%;
     margin: 1em 0;
-    border: 1px solid burlywood;
+    border: 2px solid beige;
+    border-radius: 10px;
     padding: 0.5em;
 }
 
@@ -220,7 +227,7 @@ section.repo-data {
 
 .button-container {
     width: 100%;
-    background-color: lightslategray;
+    background-color: beige;
     padding-left: 2em;
     padding-bottom: 2em;
 }
