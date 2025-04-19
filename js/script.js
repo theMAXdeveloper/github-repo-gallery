@@ -13,6 +13,12 @@ const repoSection = document.querySelector(".repos");
 // section where repo data will appear //
 const repoInfoSection = document.querySelector(".repo-data");
 
+// button that takes user back to repo gallery //
+const backToGallery = document.querySelector(".view-repos")
+
+// input for searching repos by name //
+const filterInput = document.querySelector(".filter-repos");
+
 
 const getUserData = async function () {
 	const dataRequest = await fetch(`https://api.github.com/users/${username}`)
@@ -53,6 +59,8 @@ const getRepoData = async function () {
 };
 
 const displayRepos = function (repoData) {
+	filterInput.classList.remove("hide");
+
 	for (let repo of repoData) {
 		const li = document.createElement("li");
 		li.classList.add("repo");
@@ -102,8 +110,37 @@ const displayRepoInfo = function (repoInfo, languages) {
 	`;
 
 	repoInfoSection.append(div);
+	
 	repoInfoSection.classList.remove("hide");
+	repoSection.classList.add("hide");
+	backToGallery.classList.remove("hide");
 };
+
+backToGallery.addEventListener("click", function () {
+	repoSection.classList.remove("hide");
+	repoInfoSection.classList.add("hide");
+	backToGallery.classList.add("hide");
+});
+
+filterInput.addEventListener("input", function (e) {
+	const textValue = e.target.value;
+
+	const lowerCaseText = textValue.toLowerCase();
+
+	const repos = document.querySelectorAll(".repo")
+
+	for (let repo of repos) {
+		const lowerCaseRepo = repo.innerText.toLowerCase();
+		if (lowerCaseRepo.includes(lowerCaseText)) {
+			repo.classList.remove("hide");
+		} else {
+			repo.classList.add("hide");
+		}
+
+	};
+});
+
+
 
 
 
