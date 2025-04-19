@@ -42,7 +42,7 @@ h1 {
     font-size: 3.5em;
     text-align: center;
     font-family: "Oswald", sans-serif;
-    background-color: #483978;
+    background-color: steelblue;
     color: #fff;
     text-transform: uppercase;
     border-top-left-radius: 20px;
@@ -64,7 +64,7 @@ h1 {
 .circle {
     width: 20px;
     height: 20px;
-    background-color: #483978;
+    background-color: lightsteelblue;
     border-radius: 100%;
     z-index: 99;
     align-self: center;
@@ -80,7 +80,7 @@ h1 {
 h3 {
     width: 100%;
     text-align: center;
-    color: #f86d58;
+    color: tan;
 }
 
 ul {
@@ -107,7 +107,7 @@ ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: #483978;
+    background-color: steelblue;
     color: white;
     font-size: 18px;
     padding-bottom: 2em;
@@ -135,7 +135,7 @@ ul {
     width: 100%;
     margin: 0;
     padding: 0;
-    border-bottom: 1px solid #9b8dc9;
+    border-bottom: 1px solid lightsteelblue;
     padding-bottom: 19px;
 }
 
@@ -157,7 +157,7 @@ section.repo-data {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: #fff;
+    background-color: lightslategray;
     margin-top: 0;
     padding: 2em;
 }
@@ -173,7 +173,7 @@ section.repo-data {
 .repo-list li {
     width: 90%;
     margin: 1em 0;
-    border: 1px solid #f86d58;
+    border: 1px solid burlywood;
     padding: 0.5em;
 }
 
